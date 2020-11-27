@@ -1,12 +1,15 @@
-import './App.css';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import { Provider } from "react-redux";
+import store from "./store";
+import Users from './views/Users'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+      <Provider store={store}>
+        <Users />
+      </Provider>
   );
 }
 
