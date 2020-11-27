@@ -5,7 +5,7 @@ import './UserForm.css';
 import {connect} from 'react-redux';
 
 const UserBForm=(props)=>{
-    const {userdetails} = props
+    const {userdetails} = props;
     console.log(userdetails);
     console.log("tttttt");
 
@@ -37,7 +37,17 @@ const UserBForm=(props)=>{
                             </form>
                             <br />
                             <br />
-                            <h2>User A details</h2>
+                            <div className="useraresults">
+                            <h2 className="tinyheading">User A details</h2>
+                            
+                            <ul>
+                                <li>X: {userdetails.x}</li>
+                                <li>FRUIT: {userdetails.fruits}</li>
+                                <li>DATE: {userdetails.date}</li>
+                                <li>TIME: {userdetails.time}</li>
+                                <li>Y: {userdetails.y}</li>
+                            </ul>
+                            </div>
                     </div>
             
                 </div>
@@ -46,6 +56,6 @@ const UserBForm=(props)=>{
     }
 
 const mapStateToProps = state =>{
-    return{userADetails: state.reducers.userAData}
+    return{userdetails: state.reducers.userAData}
 }
 export default connect(mapStateToProps)(UserBForm);

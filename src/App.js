@@ -8,7 +8,9 @@ import Users from './views/Users'
 function App() {
   return (
       <Provider store={store}>
+        <div className="body">
         <Users />
+        </div>
       </Provider>
   );
 }

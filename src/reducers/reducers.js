@@ -2,7 +2,7 @@ import {SET_TEXT,USER_A_DETAILS} from '../types/types'
 
 const initialState = {
     text:'',
-    userAData:{},
+    userAData:{ },
 }
 
 const reducers = (state = initialState, action) =>{
